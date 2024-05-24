@@ -3,7 +3,7 @@ import { useOutletContext } from 'react-router-dom';
 import { getConfigDefaults } from 'librechat-data-provider';
 import { useGetStartupConfig } from 'librechat-data-provider/react-query';
 import type { ContextType } from '~/common';
-import { EndpointsMenu, ModelSpecsMenu, PresetsMenu, HeaderNewChat } from './Menus';
+//import { EndpointsMenu, ModelSpecsMenu, PresetsMenu, HeaderNewChat } from './Menus';
 import HeaderOptions from './Input/HeaderOptions';
 import ExportButton from './ExportButton';
 import ExportAndShareMenu from './ExportAndShareMenu';
@@ -22,13 +22,13 @@ export default function Header() {
   return (
     <div className="sticky top-0 z-10 flex h-14 w-full items-center justify-between bg-white p-2 font-semibold dark:bg-gray-800 dark:text-white">
       <div className="hide-scrollbar flex w-full items-center justify-between gap-2 overflow-x-auto">
-        <div className="flex items-center gap-2">
+        {/* <div className="flex items-center gap-2">
           {!navVisible && <HeaderNewChat />}
           {interfaceConfig.endpointsMenu && <EndpointsMenu />}
           {modelSpecs?.length > 0 && <ModelSpecsMenu modelSpecs={modelSpecs} />}
           {<HeaderOptions interfaceConfig={interfaceConfig} />}
           {interfaceConfig.presets && <PresetsMenu />}
-        </div>
+        </div> */}
         <ExportAndShareMenu />
       </div>
       {/* Empty div for spacing */}
